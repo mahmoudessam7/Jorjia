@@ -59,10 +59,6 @@ Mahmoud Essam
 
 This project is built by Mahmoud Essam for his training. Copyright © by Mahmoud Essam. You are 100% allowed to use this webpage, but NOT to claim it as your own design. A credit to the original author, Mahmoud Essam, is of course highly recommended!
 
-
-BRADDDDDDDDAAAAAAAAAAAAAAAAAAARRRRRRRRRRRR
-
-
 [twitter]: https://twitter.com/Mahmoud_essam9
 [linkedin]: https://www.linkedin.com/in/mahmoud-essam-569a9b1b0/
 [facebook]: https://www.facebook.com/profile.php?id=100006483635948
