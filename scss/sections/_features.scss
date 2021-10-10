@@ -1,0 +1,100 @@
+@use '../custom' as *;
+
+.features {
+    padding: 7rem 0;
+}
+
+.feature {
+    padding: 3.5rem 3rem;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+
+    &--1 {
+        background-color: #F9ECF8;
+    }
+
+    &--2 {
+        background-color: #EDF9F7;
+    }
+
+    &--3 {
+        background-color: #F8F9E3;
+    }
+
+    &--4 {
+        background-color: #FFEDEC;
+    }
+
+    &__content {
+
+    }
+
+    &__icon {
+        svg {
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+        &--1 {
+            svg {
+                fill: $secondary-1;
+            }
+        }
+
+        &--2 {
+            svg {
+                fill: $primary;
+            }
+        }
+
+        &--3 {
+            svg {
+                fill: $secondary-2;
+            }
+        }
+
+        &--4 {
+            svg {
+                fill: $secondary-3;
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 1.2rem;
+        &--1 {
+            color: $secondary-1;
+        }
+
+        &--2 {
+            color: $primary;
+        }
+
+        &--3 {
+            color: $secondary-2;
+        }
+
+        &--4 {
+            color: $secondary-3;
+        }
+    }
+
+    &__text {
+        font-size: 0.9rem;
+
+        &--1 {
+            color: $secondary-1;
+        }
+
+        &--2 {
+            color: $primary;
+        }
+
+        &--3 {
+            color: $secondary-2;
+        }
+
+        &--4 {
+            color: $secondary-3;
+        }
+    }
+}

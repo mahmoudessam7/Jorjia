@@ -1,0 +1,51 @@
+@use '../custom' as *;
+@use '../components/typography' as *;
+
+.about {
+    
+}
+
+.feature-pic {
+
+    img {
+        height: 10% !important;
+    }
+}
+
+.about-content {
+    padding: 2rem 3rem;
+    
+    &__heading {
+        margin-bottom: 1rem;
+    }
+
+    &__icon {
+        fill: $primary;
+        width: 1.5rem;
+        height: 1.7rem;
+        margin-top: 4px;
+        margin-right: 1rem;
+        @include media-breakpoint-up(md) {
+            width: 1.5rem;
+            height: 1.7rem;        }
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        color: $primary;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        color: $primary;
+        width: 90%;
+    }
+}
+
+.about-pic {
+    img {
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+}

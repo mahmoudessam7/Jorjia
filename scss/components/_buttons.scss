@@ -1,0 +1,57 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.btn-rounded {
+    position: relative;
+    padding: 0.9375rem 2.2rem;
+    font-weight: 400;
+    border: 1px solid rgba($white, 0.6);
+    background-color: $white;
+    transition: all 0.2s;
+    color: $primary;
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 7px rgba($black, 0.2);
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        box-shadow: 0 2px 3px rgba($black, 0.2);
+        transform: translateY(-1px);
+    }
+}
+
+.tours {
+    
+    &__button {
+        padding: 0.9375rem 2.2rem;
+        border: none;
+        transition: all 0.2s;
+        background: $primary;
+
+        &:hover {
+            box-shadow: 0 4px 7px rgba($black, 0.2);
+            transform: translateY(-3px);
+        }
+    
+        &:active {
+            box-shadow: 0 2px 3px rgba($black, 0.2);
+            transform: translateY(-1px);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.btn-primary {
+    &:focus {
+        outline: none !important;
+        border: none;
+    }
+}

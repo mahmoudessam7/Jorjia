@@ -1,0 +1,202 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.testimonial {
+    padding: 6rem 0 15rem 0;
+    @include media-breakpoint-down(lg) {
+        padding: 6rem 0 10rem 0;
+    }
+    margin: 5rem 0 0 0;
+    background: rgba($gray-100, 1);
+    // @include gradient;
+
+    &__card {
+        padding: 5rem 1.6rem 5rem 1.6rem;
+        text-align: center;
+        border-radius: 0.625rem;
+        background: rgba($white, 1);
+        height: auto;
+        position: relative;
+        transition: all 0.8s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0), translate3d(0,0,0);
+        transform: translateZ(0), translate3d(0,0,0);
+        box-shadow: 0 0.3rem 0.7rem rgba($black, 0.1);
+
+        &:hover {
+            @include gradient;
+            .testimonial__body {
+                .glyph {
+                    color: $white;
+                    opacity: 0.5;
+                }
+            }
+
+            .testimonial__pic {
+                img {
+                    border: 0.325rem solid rgba($white, 0.9);
+                }
+            }
+            .rating {
+                svg {
+                    fill: rgba($white, 0.9);
+                }
+            }
+
+            .testimonial__testimony {
+                color: $white;
+            }
+        }
+        &-1 {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 10rem;
+            }
+        }
+
+        &-2 {
+            @include gradient;
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 10rem;
+            }
+        }
+
+        
+
+        i {
+            font-size: 1.5rem;
+            color: rgba($primary, 0.7);
+        }
+
+        
+
+        
+
+        .rating {
+
+            svg {
+                width: 1rem;
+                height: 1rem;
+                fill: rgba($primary, 0.7);
+            }
+
+            &-2 {
+                svg {
+                    fill: rgba($white, 0.9);
+                }
+            }
+        }
+    }
+
+    &__testimony {
+        
+        margin: 2rem 0 2.5rem 0;      
+        font-style: italic;
+
+        &-1 {
+            
+        }
+
+        &-2 {
+            color: $white;
+        }
+
+        &-1,
+        &-3 {
+            @include media-breakpoint-down(lg) {
+            color: rgba($gray-600, 1);
+            font-style: italic;
+            margin: 2rem 0 2.5rem 0;}
+        }
+
+
+        // &::before {
+        //     font-family: sans-serif;
+        //     content: "\201C";
+        //     display: block;
+        //     transform: scale(1200%);
+        //     position: absolute;
+        //     top: 30%;
+        //     left: 50%;
+        //     font-style: normal;
+        //     opacity: 0.2;
+        // }
+    }
+
+    &__body {
+        .glyph {
+            font-family: sans-serif;
+            display: block;
+            transform: scale(1200%);
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            font-style: normal;
+            opacity: 0.1;
+            margin: 1.5rem 0 0 0;
+            user-select: none;
+            line-height: 0;
+
+            &-2 {
+                color: $white;
+                opacity: 0.5;
+            }
+
+            @include media-breakpoint-down(lg) {
+               margin-top: 1.3rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 1.6rem;
+             }
+        }
+    }
+
+    &__info {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translateX(-50%);
+        
+    }
+
+    &__pic {
+        width: 6rem;
+        height: 6rem;
+        img {
+            border: 0.325rem solid rgba($primary, 0.7);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            user-select: none;
+            -webkit-user-drag: none;
+            box-shadow: 0 0.3rem 0.7rem rgba($black, 0.1);
+
+        }
+
+        &-2 {
+            img {
+                border: 0.325rem solid rgba($white, 0.9);
+                box-shadow: 0 0.3rem 0.7rem rgba($black, 0.1);
+            }
+        }
+    }
+
+    &__name {
+        text-align: center;
+        color: $white;
+        font-weight: 500;
+        color: rgba($primary, 0.7);
+        
+        h3 {
+            font-size: 1.2rem;
+
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 500;
+
+        }
+    }
+}

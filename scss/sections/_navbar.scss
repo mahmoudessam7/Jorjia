@@ -1,0 +1,151 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+}
+.menu {
+    @include gradient;
+
+    li {
+        padding: 0 0.7rem;
+        position: relative;
+
+        
+
+        .active {
+            position: relative;
+            font-weight: 500;
+
+            &::after {
+                content: "";
+                width: 70%;
+                height: 1px;
+                background-color: $white;
+                position: absolute;
+                left: 50%;
+                bottom: -40%;
+                transform: translateX(-50%);
+                opacity: 70%;
+            }
+            @include media-breakpoint-down(lg) {
+            
+                &::after {
+                    display: none;
+                }
+            }
+
+
+            
+
+            // @include media-breakpoint-up(lg) {
+            //     &::after {
+            //         position: absolute;
+            //         content: '';
+            //         background-color: $white;
+            //         width: 4px;
+            //         height: 4px;
+            //         top: 100%;
+            //         left: 50%;
+            //         transform: translate(-50%, -50%);
+            //         border-radius: 50%;
+            //     }
+            // }
+        }
+
+        a {
+            color: $white !important;
+            font-weight: 400;
+            text-transform: capitalize;
+            position: relative;
+
+            &:hover {
+                font-weight: 500;
+            }
+
+            &::after {
+                content: "";
+                left: 50%;
+                transform: translateX(-50%);
+                width: 70%;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover {
+                &::after {
+                    content: "";
+                    width: 70%;
+                    height: 1px;
+                    background-color: $white;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -40%;
+                    transform: translateX(-50%);
+                    opacity: 70%;
+                }
+            }
+            @include media-breakpoint-down(lg) {
+            
+                &::after {
+                    display: none;
+                }
+            }
+            
+        }
+    }
+}
+
+.navbar-brand {
+
+    .logo {
+        font-weight: 200;
+        font-size: 2rem;
+    }
+    -webkit-animation: moveInRightLogo 1s ease-out;
+                animation: moveInRightLogo 1s ease-out;
+
+    @include media-breakpoint-down(lg) {
+        animation: none;
+    }
+}
+
+#navbarNav {
+    -webkit-animation: moveInBottom 2s ease-out;
+                animation: moveInBottom 2s ease-out;
+
+    @include media-breakpoint-down(lg) {
+        animation: none;
+    }
+}
+
+.search {
+    position: relative;
+    @include media-breakpoint-down(lg) {
+            
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+}
+
+.search-bar {
+        border-radius: 90rem;
+        padding: 0.1rem 0.8rem;
+        border: none;
+        height: 1.5rem;
+        // background-color: #4DD8C5;
+        background-color: #66DFCE;
+        color: $white;
+
+        &:focus {
+            outline: none;
+        }
+}
+
+.search-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+    fill: $white;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.8rem;
+    opacity: 100%;
+}

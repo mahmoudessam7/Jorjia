@@ -1,0 +1,130 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.get-started {
+    background: rgba($gray-100, 1);
+    padding: 4rem;
+}
+
+.sub-img {
+    background-image: url(../../img/nature-4.jpg);
+    background-size: cover;
+}
+
+.cta-back {
+    position: relative;
+    overflow: hidden;
+    // &::before {
+    //     content: "Jorjia";
+    //     font-size: 60rem;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     color: $white;
+    //     opacity: 0.1;
+    //     line-height: 0.5;
+    // }
+
+    &::before {
+        content: url(../../img/patternpad\ 2.png);
+        position: absolute;
+        opacity: 0.12;
+    }
+}
+
+.cta-info {
+    padding: 3rem;
+    margin: 1rem 0;
+
+    &__list {
+        list-style: none;
+        margin-bottom: 0.7rem;
+        display: block;
+        position: relative;
+        margin-left: -1rem;
+
+        li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f00c";
+            font-weight: 600;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// FORM CONTENT 
+
+.form {
+    padding: 10rem 3rem;
+    .e-mail {
+        position: relative;
+        input {
+            border-radius: 50rem;
+            padding: 1.5rem 2.5rem;
+            width: 100%;
+            border: none;
+            color: rgba($gray-700, 1);
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                color: rgba($gray-500, 1);
+            }
+        }
+        
+    }
+
+    button {
+        border: none;
+        width: 3.5rem;
+        height: 3.5rem;
+        position: relative;
+        background-color: $primary-light;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+
+        @include media-breakpoint-down(sm) {
+            left: 85%;
+        }
+
+        @include media-breakpoint-up(sm) {
+            left: 87%;
+        }
+
+        @include media-breakpoint-up(md) {
+            left: 90%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            left: 85%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            left: 90%;
+        }
+
+        &:hover {
+            filter: brightness(105%);
+        }
+        &:active {
+            filter: brightness(110%);
+        }
+        &:focus {
+            outline: none;
+        }
+
+        svg {
+            fill: $white;
+            height: 1.5rem;
+            width: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
