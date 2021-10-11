@@ -4,7 +4,7 @@ A travelling agency that makes you life a lot easier.
 
 ## Description
 
-This is an app that is designed with pure CSS to fit the needs of any traveller. It's a simple app so it makes the travelling proccess a lot easier and simpler.
+This is a theme that is designed with pure CSS to fit the needs of any traveller. It's a simple theme yet it is beautiful and effective.
 
 ## Getting Started
 
